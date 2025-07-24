@@ -1,6 +1,7 @@
 import React from 'react'
 import hydraImage from '/hydra.png'
 import { useInView } from 'react-intersection-observer'
+import FadeInSection from './components/FadeInSection';
 
 function Home() {
 
@@ -12,10 +13,7 @@ function Home() {
   return (
     <div>
       <div
-        className="min-h-screen pt-20 px-4"
-        style={{
-          background: 'linear-gradient(to bottom, #002286 27%, rgba(32, 229, 176, 0.43) 100%)'
-        }}
+        className="min-h-screen pt-20 px-4 overflow-x-hidden"
       >
         <div className="flex flex-col md:flex-row items-center justify-between text-white pt-20 p-8 w-full">
           {/* vasak tekst */}
@@ -50,30 +48,68 @@ function Home() {
           </div>
         </div>
 
-        <div
+            <div
+        
                 ref={spiraalRef}
-                className="relative mt-20 overflow-hidden min-h-[300px]"
+                className="relative mt-40 overflow-hidden min-h-[300px]"
               >
+                
                 {inView && (
                   <div
-                    className="w-8 h-8 bg-[#00A5CF] rounded-full shadow-lg z-30 absolute top-1/2 animate-visible-loop"
+                    className="w-8 h-8 bg-[#00A5CF] rounded-full shadow-lg z-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 animate-visible-loop"
                   />
                 )}
 
 
                 <img
-                  src="/spiraal.png"
+                  src="/seehoopis.png"
                   alt="Spiraal"
-                  className="absolute bottom-[-20px] left-[-40px] w-72 md:w-[300px] transition-transform duration-300 hover:scale-110 z-20"
+                  className="w-full h-auto object-cover mx-auto"
                 />
-                <img
-                  src="/spiraal.png"
-                  alt="Spiraal"
-                  className="absolute top-[30px] right-[-40px] w-72 md:w-[300px] transition-transform duration-300 hover:scale-110 z-20"
-                />
-              </div>
+            </div>
 
-      </div>
+            <FadeInSection>
+              <h1 className='text-4xl font-bold text-center text-white font-outfit mb-20'>
+                Meist
+              </h1>
+            </FadeInSection>
+
+  {/* 1. mull */}
+  <FadeInSection>
+  <div id="hydrosys" className="md:-translate-x-64 mb-32 w-[500px] h-[500px] rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 shadow-xl border-4 border-white mx-auto">
+    <img src="/settings.png" alt="Settings Icon" className='w-16 mb-6'/>
+    <h3 className="text-xl font-bold mb-2">Hüdrosüsteemid</h3>
+    <p className="text-sm leading-relaxed max-w-[80%] font-outfit text-center">
+      Hüdrosüsteem on tänapäeva masinate juures tihti kasutatav abisüsteem, mis võimaldab suhtelist väikeste mõõtmete juures panna masina osi tegema suurt jõudu ja kontrollitud liikumist nõudvaid liigutusi.  Süsteemi üldine tööpõhimõte on kõrge rõhu all oleva töövedeliku (tavaliselt hüdroõli) suunamine tööorganisse (hüdrosilinder, hüdromootor) ja uuesti kokkukogumine järgmise tsükli alustamiseks. Süsteemi jätkusuutliku töö tagamiseks kasutatakse süsteemis palju erinevaid omavahel ühendatud komponente.
+    </p>
+  </div>
+  </FadeInSection>
+
+  {/* 2. mull */}
+   <FadeInSection>
+  <div id="skeem" className="md:translate-x-64 mb-32 w-[500px] h-[500px] rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 shadow-xl border-4 border-white mx-auto">
+    <img src="/kang.png" alt="Repair Icon" className='w-20 mb-6'/>
+    <h3 className="text-xl font-bold mb-2">Hüdroskeem</h3>
+    <p className="text-md leading-relaxed font-outfit text-center max-w-[80%]">
+      Hüdrosüsteemide tööpõhimõtte mõistmiseks on oluline hüdroskeemi olemasolu. Hästi koostatud skeemilt saab välja lugeda süsteemis olevad komponendid, nende omavahelised ühendused, funktsioonid ja põhilised parameetrid. Need teadmised on eelduseks süsteemi säästlikuks kasutamiseks ja hooldamiseks.
+    </p>
+  </div>
+  </FadeInSection>
+
+  {/* 3. mull */}
+  <FadeInSection>
+  <div id="hypne" className="md:-translate-x-64 w-[500px] h-[500px] rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 mb-16 shadow-xl border-4 border-white mx-auto">
+    <img src="/home.png" alt="Home Icon" className='w-14 mb-6'/>
+    <h3 className="text-xl font-bold mb-2">HYPNE</h3>
+    <p className="text-md leading-relaxed font-outfit text-center max-w-[80%]">
+      Hypne koostab töötava hüdraulika lahenduse arendusjärgus masinale. Hypne kaardistab olemasolevaid hüdrosüsteeme ja koostab hüdroskeemi mis aitab mõista süsteemi tööpõhimõtet.
+    </p>
+  </div>
+  </FadeInSection>
+</div>
+
+            
+
 
     </div>
   )
