@@ -51,7 +51,7 @@ function Home() {
             <div
         
                 ref={spiraalRef}
-                className="relative mt-40 overflow-hidden min-h-[300px]"
+                className="relative mt-40 min-h-screen overflow-visible"
               >
                 
                 {inView && (
