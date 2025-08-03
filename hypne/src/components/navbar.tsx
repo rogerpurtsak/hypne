@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
-import { Link } from 'react-router-dom';
 
 function Navbar() {
 

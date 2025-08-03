@@ -1,4 +1,3 @@
-import React from 'react'
 import hydraImage from '/hydra.png'
 import { useInView } from 'react-intersection-observer'
 import FadeInSection from './components/FadeInSection';
