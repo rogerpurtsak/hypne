@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
             {/* Kesk – Privaatsus */}
             <div className="sm:col-span-2 lg:col-span-1 lg:text-center">
-                © 2025 <a href="#" className="ml-2 hover:underline">Privaatsuspoliitika</a>
+                Legendid aegade algusest
             </div>
 
             {/* Parem – nupud */}

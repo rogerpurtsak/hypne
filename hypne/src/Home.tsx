@@ -16,6 +16,7 @@ function Home() {
       >
         <div className="flex flex-col md:flex-row items-center justify-between text-white pt-20 p-8 w-full">
           {/* vasak tekst */}
+          <FadeInSection>
           <div className="md:w-1/2 mb-6 md:mb-0">
             <h2 className="text-3xl md:text-5xl font-bold leading-snug text-center md:text-left">
               <span className="text-white">Me pakume</span>{' '}
@@ -23,6 +24,8 @@ function Home() {
               <span className="block">pikaajalise kogemuse baasil.</span>
             </h2>
           </div>
+          </FadeInSection>
+          
 
           {/* parempoolne pilt */}
           <div className="relative md:w-1/2">
@@ -75,21 +78,25 @@ function Home() {
 
   {/* 1. mull */}
   <FadeInSection>
-  <div id="hydrosys" className="md:-translate-x-64 mb-32 w-[500px] h-[500px] rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 shadow-xl border-4 border-white mx-auto">
-    <img src="/settings.png" alt="Settings Icon" className='w-16 mb-6'/>
-    <h3 className="text-xl font-bold mb-2">Hüdrosüsteemid</h3>
-    <p className="text-sm leading-relaxed max-w-[80%] font-outfit text-center">
-      Hüdrosüsteem on tänapäeva masinate juures tihti kasutatav abisüsteem, mis võimaldab suhtelist väikeste mõõtmete juures panna masina osi tegema suurt jõudu ja kontrollitud liikumist nõudvaid liigutusi.  Süsteemi üldine tööpõhimõte on kõrge rõhu all oleva töövedeliku (tavaliselt hüdroõli) suunamine tööorganisse (hüdrosilinder, hüdromootor) ja uuesti kokkukogumine järgmise tsükli alustamiseks. Süsteemi jätkusuutliku töö tagamiseks kasutatakse süsteemis palju erinevaid omavahel ühendatud komponente.
-    </p>
-  </div>
+  <div
+  id="hydrosys"
+  className="mb-32 w-[90vw] max-w-[500px] aspect-square rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 shadow-xl border-4 border-white mx-auto md:-translate-x-64"
+>
+  <img src="/settings.png" alt="Settings Icon" className="w-16 mb-6" />
+  <h3 className="text-xl font-bold mb-3">Hüdrosüsteemid</h3>
+  <p className="text-sm leading-relaxed max-w-[80%] font-outfit text-center p-3">
+    Hüdrosüsteem on tänapäeva masinate juures tihti kasutatav abisüsteem, mis võimaldab suhteliselt väikeste mõõtmete juures panna masina osi tegema suurt jõudu ja kontrollitud liikumist nõudvaid liigutusi. Süsteemi üldine tööpõhimõte on kõrge rõhu all oleva töövedeliku (tavaliselt hüdroõli) suunamine tööorganisse (hüdrosilinder, hüdromootor) ja uuesti kokkukogumine järgmise tsükli alustamiseks. Süsteemi jätkusuutliku töö tagamiseks kasutatakse süsteemis palju erinevaid omavahel ühendatud komponente.
+  </p>
+</div>
+
   </FadeInSection>
 
   {/* 2. mull */}
    <FadeInSection>
-  <div id="skeem" className="md:translate-x-64 mb-32 w-[500px] h-[500px] rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 shadow-xl border-4 border-white mx-auto">
+  <div id="skeem" className="mb-32 w-[90vw] max-w-[500px] aspect-square rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 shadow-xl border-4 border-white mx-auto md:translate-x-64">
     <img src="/kang.png" alt="Repair Icon" className='w-20 mb-6'/>
     <h3 className="text-xl font-bold mb-2">Hüdroskeem</h3>
-    <p className="text-md leading-relaxed font-outfit text-center max-w-[80%]">
+    <p className="text-md md:text-base leading-relaxed font-outfit text-center max-w-[80%] p-3">
       Hüdrosüsteemide tööpõhimõtte mõistmiseks on oluline hüdroskeemi olemasolu. Hästi koostatud skeemilt saab välja lugeda süsteemis olevad komponendid, nende omavahelised ühendused, funktsioonid ja põhilised parameetrid. Need teadmised on eelduseks süsteemi säästlikuks kasutamiseks ja hooldamiseks.
     </p>
   </div>
@@ -97,13 +104,17 @@ function Home() {
 
   {/* 3. mull */}
   <FadeInSection>
-  <div id="hypne" className="md:-translate-x-64 w-[500px] h-[500px] rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 mb-16 shadow-xl border-4 border-white mx-auto">
-    <img src="/home.png" alt="Home Icon" className='w-14 mb-6'/>
+  <div
+    id="hypne"
+    className="mb-16 w-[90vw] max-w-[500px] aspect-square rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-8 shadow-xl border-4 border-white mx-auto md:-translate-x-64"
+  >
+    <img src="/home.png" alt="Home Icon" className="w-14 mb-6" />
     <h3 className="text-xl font-bold mb-2">HYPNE</h3>
-    <p className="text-md leading-relaxed font-outfit text-center max-w-[80%]">
-      Hypne koostab töötava hüdraulika lahenduse arendusjärgus masinale. Hypne kaardistab olemasolevaid hüdrosüsteeme ja koostab hüdroskeemi mis aitab mõista süsteemi tööpõhimõtet.
+    <p className="text-sm md:text-base leading-relaxed font-outfit text-center max-w-[80%]">
+      Hypne koostab töötava hüdraulika lahenduse arendusjärgus masinale. Hypne kaardistab olemasolevaid hüdrosüsteeme ja koostab hüdroskeemi, mis aitab mõista süsteemi tööpõhimõtet.
     </p>
   </div>
+
   </FadeInSection>
 </div>
 
