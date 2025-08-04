@@ -37,10 +37,7 @@ function Navbar() {
             onClick={() => {
               setIsOpen(false);
               setTimeout(() => {
-                const el = document.getElementById('hydrosys');
-                if (el) {
-                  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+                document.getElementById('hydrosys')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
               }, 100);
             }}
 
@@ -61,8 +58,7 @@ function Navbar() {
               onClick={() => {
                 setIsOpen(false);
                 setTimeout(() => {
-                  const section = document.getElementById('skeem');
-                  section?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  document.getElementById('skeem')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }, 100);
               }}
               className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
@@ -81,8 +77,7 @@ function Navbar() {
               onClick={() => {
                 setIsOpen(false);
                 setTimeout(() => {
-                  const section = document.getElementById('hypne');
-                  section?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  document.getElementById('hypne')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }, 100);
               }}
               className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
@@ -107,8 +102,10 @@ function Navbar() {
               <li>
                 <button
                   onClick={() => {
-                    document.getElementById('hydrosys')?.scrollIntoView({ behavior: 'smooth' });
                     setIsOpen(false);
+                    setTimeout(() => {
+                      document.getElementById('hydrosys')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
                   }}
                   className="block w-full text-center px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-300 transform hover:scale-105"
                   style={{
@@ -122,8 +119,10 @@ function Navbar() {
               <li>
                 <button
                   onClick={() => {
-                    document.getElementById('skeem')?.scrollIntoView({ behavior: 'smooth' });
                     setIsOpen(false);
+                    setTimeout(() => {
+                      document.getElementById('skeem')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
                   }}
                   className="block w-full text-center px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-300 transform hover:scale-105"
                   style={{
@@ -137,8 +136,10 @@ function Navbar() {
               <li>
                 <button
                   onClick={() => {
-                    document.getElementById('hypne')?.scrollIntoView({ behavior: 'smooth' });
                     setIsOpen(false);
+                    setTimeout(() => {
+                      document.getElementById('hypne')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
                   }}
                   className="block w-full text-center px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-300 transform hover:scale-105"
                   style={{
