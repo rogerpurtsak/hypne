@@ -33,56 +33,66 @@ function Navbar() {
         <ul className="hidden md:flex space-x-10">
           <li>
 
-                <button
-                  onClick={() => {
-                    const section = document.getElementById('hydrosys');
-                    section?.scrollIntoView({ behavior: 'smooth' });
-                    setIsOpen(false);
-                  }}
-                  className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
-                  style={{
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                    boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.6)',
-                  }}
-                >
-                  Hüdrosüsteemid
-                </button>
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              setTimeout(() => {
+                const el = document.getElementById('hydrosys');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+              }, 100);
+            }}
+
+            className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
+            style={{
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+              boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.6)',
+            }}
+          >
+            Hüdrosüsteemid
+          </button>
+
 
 
             </li>
           <li>
             <button
-                  onClick={() => {
-                    const section = document.getElementById('skeem');
-                    section?.scrollIntoView({ behavior: 'smooth' });
-                    setIsOpen(false);
-                  }}
-                  className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
-                  style={{
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                    boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.6)',
-                  }}
-                >
-                  Skeemid
-                </button>
+              onClick={() => {
+                setIsOpen(false);
+                setTimeout(() => {
+                  const section = document.getElementById('skeem');
+                  section?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+              }}
+              className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
+              style={{
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.6)',
+              }}
+            >
+              Hüdroskeem
+            </button>
 
             </li>
           <li>
 
             <button
-                  onClick={() => {
-                    const section = document.getElementById('hypne');
-                    section?.scrollIntoView({ behavior: 'smooth' });
-                    setIsOpen(false);
-                  }}
-                  className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
-                  style={{
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                    boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.6)',
-                  }}
-                >
-                  Hypne
-                </button>
+              onClick={() => {
+                setIsOpen(false);
+                setTimeout(() => {
+                  const section = document.getElementById('hypne');
+                  section?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+              }}
+              className="inline-block px-10 py-3 bg-[#0F7DA0] text-white font-outfit rounded-3xl shadow-2xl hover:bg-white/30 hover:shadow-lg hover:ring-2 hover:ring-white transition duration-500 transform hover:scale-105"
+              style={{
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.6)',
+              }}
+            >
+              Hypne
+            </button>
 
             </li>
         </ul>
