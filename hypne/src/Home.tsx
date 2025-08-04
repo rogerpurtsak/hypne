@@ -80,7 +80,7 @@ function Home() {
 
   {/* 1. mull */}
   <FadeInSection>
-  <div
+  <div id='hydrosys'
     className="w-[90vw] max-w-[500px] aspect-square rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-4 shadow-xl border-4 border-white mx-auto lg:-translate-x-64 mb-10 overflow-hidden space-y-4"
   >
     <img src="/settings.png" alt="Settings Icon" className="w-8 sm:w-10 md:w-12" />
@@ -97,7 +97,7 @@ function Home() {
 
   {/* 2. mull */}
    <FadeInSection>
-  <div
+  <div id='skeem'
     className="w-[90vw] max-w-[500px] aspect-square rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-4 shadow-xl border-4 border-white mx-auto lg:translate-x-64 mb-10 overflow-hidden space-y-4"
   >
     <img src="/kang.png" alt="Repair Icon" className="w-10 md:w-20" />
@@ -113,7 +113,7 @@ function Home() {
 
   {/* 3. mull */}
   <FadeInSection>
-  <div
+  <div id='hypne'
     className="w-[90vw] max-w-[500px] aspect-square rounded-full bg-[#001D5E] text-white flex flex-col items-center justify-center text-center p-4 shadow-xl border-4 border-white mx-auto mb-10 overflow-hidden space-y-4"
   >
     <img src="/home.png" alt="Home Icon" className="w-8 md:w-14" />
